@@ -2,7 +2,7 @@
   "name": "covert-alias",
   "version": "1.0.0",
   "description": "aaaaa",
-  "main": "index.js",
+  "main": "/dist/index.js",
   "jest": {
     "testURL": "http://localhost/",
     "moduleFileExtensions": [
