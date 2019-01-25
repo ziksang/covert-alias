@@ -3,6 +3,15 @@
   "version": "1.0.0",
   "description": "aaaaa",
   "main": "index.js",
+  "jest": {
+    "testURL": "http://localhost/",
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "transform": {
+      "^.+\\.js?$": "babel-jest"
+    }
+  },
   "scripts": {
     "build": "cross-env BABEL_ENV=build rollup -c ./build/rollup.config.js",
     "test": "jest --notify --coverage",
