@@ -1,4 +1,4 @@
-import { covertAliasPur } from '../src/index'
+import { cArrayPur } from '../src/index'
 
 const toEqual = (assertion, expection, result) => {
   it(assertion, () => {
@@ -14,4 +14,4 @@ const arrayValue = [
   { label: 'samin', value: 'samin' }
 ]
 
-toEqual('Successful transformation', covertAliasPur(array, ['label', 'value']), arrayValue)
+toEqual('Successful transformation', cArrayPur(array, ['label', 'value']), arrayValue)

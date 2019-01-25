@@ -1,4 +1,4 @@
-import { covertAlias } from '../src/index'
+import { cArray } from '../src/index'
 
 const toEqual = (assertion, expection, result) => {
   it(assertion, () => {
@@ -24,7 +24,7 @@ const arrayValueAll = [
   { name: 'ben', age: 13, id: 3, label: 'ben', value: 3 },
 ]
 
-toEqual('covertAlias and return all', covertAlias(array, { label: 'name', value: 'id' }, 'all'), arrayValueAll)
+toEqual('covertAlias and return all', cArray(array, { label: 'name', value: 'id' }, 'all'), arrayValueAll)
 
 
-toEqual('covertAlias and return all', covertAlias(array, { label: 'name', value: 'id' }), arrayValue)
+toEqual('covertAlias and return all', cArray(array, { label: 'name', value: 'id' }), arrayValue)

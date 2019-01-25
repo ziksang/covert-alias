@@ -22,7 +22,7 @@ function tranformAliasPur(name) {
   }, {})
 }
 
-const covertAliasPur = function (data, name) {
+const cArrayPur = function (data, name) {
   typeError(data, name, true)
   const tranformAlias = tranformAliasPur(name)
   const tranformVal = data.map(item => {
@@ -36,7 +36,7 @@ const covertAliasPur = function (data, name) {
 }
 
 
-const covertAlias = function (data, name, tag) {
+const cArray = function (data, name, tag) {
   typeError(data, name, false)
   return data.map(item => {
     const obj = {}
@@ -54,4 +54,4 @@ const covertAlias = function (data, name, tag) {
   })
 }
 
-export { covertAliasPur, covertAlias}
+export { cArrayPur, cArray}
