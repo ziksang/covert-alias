@@ -1,4 +1,4 @@
-import { covertAliasPur } from '../src/index'
+import { covertAliasPur, covertAlias } from '../src/index'
 
 const handleThrow = (assertion, fn) => {
   test(assertion, () => {
@@ -19,6 +19,13 @@ describe('covertAliasPur name must be array throw Error', () => {
   handleThrow('Data is a boolean error', () => covertAliasPur(array, true))
   handleThrow('Data is a number error', () => covertAliasPur(array, 1))
   handleThrow('Data is a object error', () => covertAliasPur(array, {a: 1}))
+})
+
+describe('covertAlias name must be object throw Error', () => {
+  handleThrow('Data is a string error', () => covertAlias(array, 'string'))
+  handleThrow('Data is a boolean error', () => covertAlias(array, true))
+  handleThrow('Data is a number error', () => covertAlias(array, 1))
+  handleThrow('Data is a array error', () => covertAlias(array, []))
 })
 
 describe('covertAliasPur name must be empty array throw Error', () => {
