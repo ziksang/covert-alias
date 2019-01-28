@@ -19,7 +19,7 @@ npm install covert-alias
 
 ## 举个例子:
 
-在vue中有一个select框中需要写入的数据通过封装为传入的value展示的为**value**字段， label展示的为**label字段**,
+在vue中有一个select框中需要写入的数据通过封装为传入的value展示的为**value**字段，label展示的为**label字段**,
 而后台返回的则的是以下情况
 
 > 使用方式
@@ -27,7 +27,7 @@ npm install covert-alias
 数组
 ```js
 const { cArrayPur } from 'covert-alias'
-const array = ['kitty', true]
+const array = ['kitty', true]
 const value = cArrayPur(array, ['label', 'value'])
 console.log(value)
 // [ { labe: 'kitty', value: 'kitty' }, { label: true, value: true }]
@@ -35,7 +35,7 @@ console.log(value)
 
 对象数组
 
-```
+```js
 const { cArray } from 'covert-alias'
 const array = [
   { name: 'kitty', id: 1, age: 1 },
@@ -53,7 +53,7 @@ const value = cArray(array, { label: 'name', value: 'id' }, 'all')
 
 const value = cArray(array, { label: 'name', value: 'id' }) 
 
-// 如果第三个参数不传任何东西则只会返回替换字段后的结果
+// 如果第三个参数不传任何东西则只会返回替换字段后的结果
 //const array = [
 //  { label: 'kitty', value: 1 },
 //  { label: 'peter', value: 2 },
